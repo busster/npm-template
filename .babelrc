@@ -1,0 +1,18 @@
+{
+  "presets": ["@babel/preset-env", "minify"],
+  "env": {
+    "production": {
+      "ignore": [
+        "./**/*.test.js"
+      ]
+    }
+  },
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "@": "./src"
+      }
+    }]
+  ]
+}
