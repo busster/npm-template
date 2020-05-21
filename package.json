@@ -7,7 +7,7 @@
     "lib"
   ],
   "scripts": {
-    "build": "env BABEL_ENV=production babel src -d lib",
+    "build": "env BABEL_ENV=production babel src -d lib --copy-files",
     "test": "jest"
   },
   "author": "Jason Buss (jasonmbuss@gmail.com)",
@@ -15,10 +15,14 @@
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.6",
+    "@babel/polyfill": "^7.8.7",
     "@babel/preset-env": "^7.9.6",
     "babel-loader": "^8.1.0",
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-preset-minify": "^0.5.1",
     "jest": "^26.0.1"
+  },
+  "dependencies": {
+    "regenerator-runtime": "^0.13.5"
   }
 }
